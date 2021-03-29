@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_desc"
+                style="@style/LabelTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="发现800MB垃圾"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_clean"
+                style="@style/TitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/tv_desc"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/selector_notification_click"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="立即清理"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="0.8dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/color_label" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/fl_memory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/shape_circle_progress_background"
+                    android:rotation="180"
+                    android:secondaryProgress="60" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/shape_circle_progress_success_background"
+                    android:rotation="180"
+                    android:secondaryProgress="60" />
+
+                <TextView
+                    android:id="@+id/tv_percent"
+                    style="@style/LabelTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="60%"
+                    android:textSize="9sp" />
+            </FrameLayout>
+
+
+            <TextView
+                style="@style/TitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="加速" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/ll_storage"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_storage_percent"
+                style="@style/LabelTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="100%" />
+
+            <TextView
+                style="@style/TitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="存储容量" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/ll_cpu"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cpu_temperature"
+                style="@style/LabelTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="100%" />
+
+            <TextView
+                style="@style/TitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="CPU温度" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_settings_24" />
+
+            <TextView
+                style="@style/TitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="系统设置" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
